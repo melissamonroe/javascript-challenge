@@ -207,18 +207,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
+label {
+  text-transform: capitalize;
+  font-size: .8em;
+  font-weight: 700;
+}
 .list-group-item {
-  padding: 16px 48px;
+  
 }
 .list-group {
- margin-bottom: 16px;
+ 
  
 }
 
 .form-control {
-  width: 150px; 
-  text-align: center;
+  
+  
 }
 
 @media (max-width: 1366px) {

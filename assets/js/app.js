@@ -50,3 +50,17 @@ function LF_PopulateTableData(p_tableData) {
         });
 }
 
+// @TODO add clear functionality
+
+// @TODO add calendar picker extender
+
+// @TODO rething filter position
+
+// @TODO auto populate available filter days ?
+
+// @TODO Using multiple input tags and/or select dropdowns, write JavaScript code so the user can to set multiple filters and search for UFO sightings using the following criteria based on the table columns:
+// date/time
+// city
+// state
+// country
+// shape

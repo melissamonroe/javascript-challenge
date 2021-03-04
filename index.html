@@ -64,19 +64,7 @@
     <div class="hero-container" > 
       <h1></h1>
       <h2>The truth is out there</h2>
-      <a href="#about" class="btn-get-started scrollto" style="display: none;">Show me</a>
-
-      <form>
-        <div class="form-group">
-          <ul class="list-group" id="filters">
-            <li class="filter list-group-item">
-              <label for="date">Enter a Date</label>
-              <input class="form-control" id="datetime" type="text" placeholder="1/11/2011" >
-            </li>
-          </ul>
-        </div>
-        <button id="filter-btn" type="button" class="btn btn-get-started">Filter Table</button>
-      </form>
+      <a href="#UFO" class="btn-get-started scrollto">Show me</a>
 
     </div>
   </section><!-- End Hero -->
@@ -113,16 +101,47 @@
       </div>
     </section><!-- End About Section -->
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
+    <!-- ======= UFO Filter Table Section ======= -->
+    <section id="UFO" class="services section-bg">
       <div class="container">
-
         <div class="section-title">
           <h2>Find UFO Sightings</h2>
           <p>Enter date above and click filter table to display filtered UFO sightings</p>
-        </div>      
+        </div>                     
         <div class="row margin-top-50">
-          <div class="col-md-12">
+
+          <div class="col-md-2">
+            <form>
+              <div class="form-group">
+                <ul class="list-group" id="filters">
+                  <li class="filter list-group-item">
+                    <label for="datetime">Enter a date</label>
+                    <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
+                  </li>
+                  <li class="filter list-group-item">
+                    <label for="filter">City</label>
+                    <input class="form-control" id="filter2" type="text" placeholder="City" >
+                  </li>                  
+                  <li class="filter list-group-item">
+                    <label for="filter 2">State</label>
+                    <input class="form-control" id="filter2" type="text" placeholder="State" >
+                  </li>                  
+                  <li class="filter list-group-item">
+                    <label for="filter 2">Country</label>
+                    <input class="form-control" id="filter2" type="text" placeholder="Country" >
+                  </li>                  
+                  <li class="filter list-group-item">
+                    <label for="filter 2">Shape</label>
+                    <input class="form-control" id="filter2" type="text" placeholder="Shape" >
+                  </li>                  
+                </ul>
+              </div>
+
+              <button id="filter-btn" type="button" class="btn btn-get-started">Filter Table</button>
+
+            </form>
+          </div>
+          <div class="col-md-10">
             <div id="table-area" class="">
               <table id="ufo-table" class="table table-striped">
                 <thead>
