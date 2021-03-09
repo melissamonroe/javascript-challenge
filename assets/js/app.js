@@ -1,6 +1,14 @@
 // from data.js
 var tableData = data;
 
+//select unique datetimes from dataset
+var datetimes = tableData.map(datetime => datetime.datetime);
+var uniqueDatetimes = datetimes.filter((v, i, a) => a.indexOf(v) === i);
+
+//select unique cities from dataset
+// var cities = tableData.map(city => city.city);
+// var uniqueCities = cities.filter((v, i, a) => a.indexOf(v) === i);
+
 // print tableData to the console
 console.log(tableData);
 
@@ -19,6 +27,9 @@ var form = d3.select("#form");
 
 // select inputs 
 var inputElementDate = d3.select("#datetime");
+uniqueDatetimes.forEach(date => {
+    inputElementDate.append('option').text(date);
+});
 var inputElementCity = d3.select("#city");
 var inputElementState = d3.select("#state");
 var inputElementCountry = d3.select("#country");

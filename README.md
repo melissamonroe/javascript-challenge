@@ -8,7 +8,7 @@ There is just one tiny problem though... our collection is too large to search t
 
 Code was written that dynamically creates a table based upon a [dataset](assets/js/data.js). Users can also filter the table data for specific values. Only only JavaScript, HTML, and CSS, and D3.js were used to filter and display the data in the table. They are the only coding languages which can be trusted.
 
-Link to UFO Sightings homepage: https://melissamonroe.github.io/javascript-challenge/
+[Link to UFO Sightings homepage](https://melissamonroe.github.io/javascript-challenge/)
 
 ## Your Task
 
