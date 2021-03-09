@@ -35,6 +35,7 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
 </head>
 
 <body>
@@ -44,14 +45,14 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1><a href="index.html">UFO Sightings</a></h1>
+        <h1><a href="index.html">ALIENS-R-REAL</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto active" href="#UFO">UFO Sightings</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -62,9 +63,9 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" style="height: 350px;">
     <div class="hero-container" > 
-      <h1></h1>
-      <h2>The truth is out there</h2>
-      <a href="#UFO" class="btn-get-started scrollto">Show me</a>
+      <h1>The truth is out there</h1>
+      <h2>Enter filter information below to search UFO sightings</h2>
+      <a href="#UFO" class="btn-get-started scrollto" style="display: none;">Show me</a>
 
     </div>
   </section><!-- End Hero -->
@@ -106,39 +107,40 @@
       <div class="container">
         <div class="section-title">
           <h2>Find UFO Sightings</h2>
-          <p>Enter date above and click filter table to display filtered UFO sightings</p>
+          <p>Enter filters and click "Filter Table" button to display filtered UFO sightings</p>
         </div>                     
         <div class="row margin-top-50">
 
           <div class="col-md-2">
-            <form>
+            <form id="form">
               <div class="form-group">
                 <ul class="list-group" id="filters">
                   <li class="filter list-group-item">
                     <label for="datetime">Enter a date</label>
                     <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
-                  </li>
+                  </li>   
                   <li class="filter list-group-item">
-                    <label for="filter">City</label>
-                    <input class="form-control" id="filter2" type="text" placeholder="City" >
-                  </li>                  
+                    <label for="city">Enter a city</label>
+                    <input class="form-control" id="city" type="text" placeholder="San Diego">
+                  </li>                             
                   <li class="filter list-group-item">
-                    <label for="filter 2">State</label>
-                    <input class="form-control" id="filter2" type="text" placeholder="State" >
-                  </li>                  
+                    <label for="">Enter a state </label>
+                    <input class="form-control" id="state" type="text" placeholder="CA">
+                  </li>                             
                   <li class="filter list-group-item">
-                    <label for="filter 2">Country</label>
-                    <input class="form-control" id="filter2" type="text" placeholder="Country" >
-                  </li>                  
+                    <label for="">Enter a country</label>
+                    <input class="form-control" id="country" type="text" placeholder="US">
+                  </li>                             
                   <li class="filter list-group-item">
-                    <label for="filter 2">Shape</label>
-                    <input class="form-control" id="filter2" type="text" placeholder="Shape" >
-                  </li>                  
+                    <label for="">Enter a shape</label>
+                    <input class="form-control" id="shape" type="text" placeholder="Circle">
+                  </li>                             
                 </ul>
               </div>
-
-              <button id="filter-btn" type="button" class="btn btn-get-started">Filter Table</button>
-
+              <div style="padding: 16px;">
+                <button id="filter-btn" type="button" class="btn btn-outline-dark">Filter Table</button>
+                <button id="clear-btn" type="button" class="btn">Clear</button>
+              </div>
             </form>
           </div>
           <div class="col-md-10">
