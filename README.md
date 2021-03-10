@@ -1,5 +1,7 @@
 # JavaScript Homework - JavaScript and DOM Manipulation
 
+![UFO Sightings Data](assets/img/hero-bg.jpg)
+
 ## Background
 
 WAKE UP SHEEPLE! The extra-terrestrial menace has come to Earth and we here at `ALIENS-R-REAL` have collected all of the eye-witness reports we could to prove it! All we need to do now is put this information online for the world to see and then the matter will finally be put to rest.
@@ -10,9 +12,9 @@ Code was written that dynamically creates a table based upon a [dataset](assets/
 
 [Link to UFO Sightings homepage](https://melissamonroe.github.io/javascript-challenge/)
 
-## Your Task
+## Task
 
-### Level 1: Automatic Table and Multiple Search Categories
+### Automatic Table and Multiple Search Categories
 
 * A basic HTML web page was created [index.html](index.html)
 

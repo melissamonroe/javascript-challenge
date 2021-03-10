@@ -5,10 +5,6 @@ var tableData = data;
 var datetimes = tableData.map(datetime => datetime.datetime);
 var uniqueDatetimes = datetimes.filter((v, i, a) => a.indexOf(v) === i);
 
-//select unique cities from dataset
-// var cities = tableData.map(city => city.city);
-// var uniqueCities = cities.filter((v, i, a) => a.indexOf(v) === i);
-
 // print tableData to the console
 console.log(tableData);
 
@@ -18,18 +14,15 @@ var buttonClear = d3.select("#clear-btn");
 //select form
 var form = d3.select("#form");
 
-// @TODO Using multiple input tags and/or select dropdowns, write JavaScript code so the user can to set multiple filters and search for UFO sightings using the following criteria based on the table columns:
-// date/time
-// city
-// state
-// country
-// shape
-
 // select inputs 
 var inputElementDate = d3.select("#datetime");
+
+// auto populate available filter days and add blank option to search without date filter
+inputElementDate.append('option').text("");
 uniqueDatetimes.forEach(date => {
     inputElementDate.append('option').text(date);
 });
+
 var inputElementCity = d3.select("#city");
 var inputElementState = d3.select("#state");
 var inputElementCountry = d3.select("#country");
@@ -38,7 +31,7 @@ var inputElementShape = d3.select("#shape");
 // Create event handlers 
 buttonFilter.on("click", filterData);
 buttonClear.on("click", clearFilters);
-form.on("submit", filterData);
+form.on("change", filterData);
 
 // select table tbody
 var tbody = d3.select("tbody");
@@ -46,8 +39,6 @@ var tbody = d3.select("tbody");
 LF_PopulateTableData(tableData);
 
 function filterData() {
-
-    //console.log("filterData");
 
     // Prevent the page from refreshing
     d3.event.preventDefault();
@@ -59,20 +50,13 @@ function filterData() {
     var inputValueCountry = inputElementCountry.property("value").toLowerCase();
     var inputValueShape = inputElementShape.property("value").toLowerCase();
 
-    // console.log(inputValueDate)
-    // console.log(inputValueCity)
-
-    // check if value is not null or blank
-    // check if value is valid datetime
-    
-    // filter() uses the custom function as its argument
     var filteredData = tableData;
     
     if (inputValueDate !== "") {
-        filteredData = filteredData.filter(sighting => sighting.datetime === inputValueDate);
+        filteredData = filteredData.filter(sighting => sighting.datetime === inputValueDate);        
     }
     if (inputValueCity !== "") {
-        filteredData = tableData.filter(sighting => sighting.city === inputValueCity);
+        filteredData = filteredData.filter(sighting => sighting.city === inputValueCity);
     }
     if (inputValueState !== "") {
         filteredData = filteredData.filter(sighting => sighting.state === inputValueState);
@@ -84,6 +68,8 @@ function filterData() {
         filteredData = filteredData.filter(sighting => sighting.shape === inputValueShape);
     }
 
+    console.log(filteredData);
+
     LF_PopulateTableData(filteredData);
 }
 
@@ -92,13 +78,11 @@ function clearFilters() {
     console.log("clearFilters");
 
     // Prevent the page from refreshing
-    d3.event.preventDefault();
-
     inputElementDate.property('value', "");    
     inputElementCity.property('value', "");    
     inputElementState.property('value', "");    
     inputElementCountry.property('value', "");    
-    inputElementShape.property('value', "");    
+    inputElementShape.property('value', "");
 
     LF_PopulateTableData(tableData);
 }
@@ -120,10 +104,3 @@ function LF_PopulateTableData(p_tableData) {
             });
         });
 }
-
-// @TODO add calendar picker extender
-
-// @TODO rething filter position
-
-// @TODO auto populate available filter days ?
-
